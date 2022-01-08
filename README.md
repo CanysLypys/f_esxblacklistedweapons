@@ -3,7 +3,7 @@ A configurable script that checks for blacklisted weapons
 
 # Installation to your server
 
-1 : After downloading this script extract it and rename it to f_esxblacklistedweapons 
+1 : After downloading this script open the f_esxblacklistedweapons-main and  extract f_esxblacklistedweapons
 
 2 : Drag it to your resources folder
 
