@@ -66,7 +66,7 @@ local webhook = "" --Please fill in with your webhook here
 RegisterServerEvent('fuego:checkblacklistedweapon')
 AddEventHandler('fuego:checkblacklistedweapon', function()
     local xPlayer = ESX.GetPlayerFromId(source)
-    if checkforweapon() == true then
+    if checkforweapon() then
         removeWeapon()
     end
 end)
@@ -78,7 +78,7 @@ function removeWeapon()
             xPlayer.removeWeapon(v)
             PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({embeds={{title="Fuego Black Listed Weapons System",description="\n **"..xPlayer.name.."** had a blacklisted weapon \nThe weapon was : **<<"..v..">>**",color=7419530}}}), { ['Content-Type'] = 'application/json' })
             xPlayer.removeWeapon(v)
-    end
+      end
   end 
 end
 
